@@ -1,0 +1,13 @@
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\EmployeeBAL.dll
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\EmployeeBAL.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\EmployeeDAL.dll
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\Employeemodel.dll
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\EmployeeDAL.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\Employeemodel.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.csproj.CopyComplete
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.dll
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\Dapper.dll
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\Dapper.xml

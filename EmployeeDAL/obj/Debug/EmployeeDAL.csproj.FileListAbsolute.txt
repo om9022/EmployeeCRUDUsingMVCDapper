@@ -1,0 +1,11 @@
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\EmployeeDAL.dll
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\EmployeeDAL.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\Dapper.dll
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\Employeemodel.dll
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\Employeemodel.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\Dapper.xml
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.csproj.CopyComplete
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.dll
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.pdb
