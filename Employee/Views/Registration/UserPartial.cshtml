@@ -1,0 +1,51 @@
+﻿@model Employeemodel.RegistrationViewModel
+@if (Model.RegistrationModelList.Count > 0 || Model.RegistrationModelList != null)
+{
+    <input type="text" id="TxtId" hidden />
+    <table class="table table-bordered table-striped" id="TableUserPartial">
+        <thead>
+            <tr>
+                <th class="text-center">Sr.No</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">EmailId</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.RegistrationModelList.Count; i++)
+            {
+            <tr>
+                <td class="text-center">@Model.RegistrationModelList[i].SrNo</td>
+                <td class="text-center">@Model.RegistrationModelList[i].Name</td>
+                <td class="text-center">@Model.RegistrationModelList[i].EmailId</td>
+                <td class="text-center" style="padding: 3px;">
+                    <div class="btn-group">
+                        <a id="@Model.RegistrationModelList[i].Id" onclick="ViewFromData(@Model.RegistrationModelList[i].Id);" data-toggle="tooltip" title="Edit" data-placement="left" class="btn btn-sm btn-default waves-effect" style="height: 30px;margin-right: 10px;border-radius: 5px;padding-top: 8px;"><i class="fa fa-edit"></i></a>
+
+                        <a id="@Model.RegistrationModelList[i].Id" onclick="RemoveFromData(@Model.RegistrationModelList[i].Id)" data-toggle="tooltip" title="Delete" data-placement="left" class="btn btn-sm btn-danger waves-effect" style="height: 30px;border-radius: 5px;padding-top: 8px;"><i class="fa fa-trash"></i></a>
+                    </div>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="text-center">Sr.No</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Email Id</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">No data Found</td>
+            </tr>
+        </tbody>
+    </table>
+}
+

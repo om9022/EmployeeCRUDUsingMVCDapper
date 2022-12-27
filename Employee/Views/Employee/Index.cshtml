@@ -4,9 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-5" p-4>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4" p-4>
             <div class="box box-primary " style="box-shadow: 5px 5px 5px 10px lightgray;">
                 <div class="box-header with-border" style="background-color:lightblue">
                     <h3 class="box-title text-center " id="PageTitle"><b>Employee Form</b></h3>
@@ -24,27 +24,40 @@
                         <div class="col-md-12">
                             <div class="form-group" id="DivEmpContact">
                                 <label for="">Contact<span style="color:red">*</span></label>
-                                <input type="number" class="form-control txtOnly" id="TxtEmpContact" placeholder="Enter Contact number" maxlength="50" required>
+                                <input type="text" class="form-control txtOnly" id="TxtEmpContact" placeholder="Enter Contact number" maxlength="50" pattern="[1-9]{1}[0-9]{9}" required>
                                 <span class="help-block" id="ErrorEmpContact"></span>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group" id="DivEmpLocation">
                                 <label for="">Location <span style="color:red">*</span></label>
-                                <input type="text" class="form-control txtOnly" id="TxtLocationName" placeholder="Enter Location Name" maxlength="50">
+                                <select name="" id="TxtLocationName" class="form-control">
+                                    <option selected="" value="">--Select Location--</option>
+                                    @Html.Raw(ViewBag.LocationModelList)
+                                </select>
                                 <span class="help-block" id="ErrorLocationName"></span>
+
+                                @*<input type="text" class="form-control txtOnly" id="TxtLocationName" placeholder="Enter Location Name" maxlength="50">*@
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group" id="DivEmpFile">
+                                <label for="">Add File<span style="color:red">*</span></label>
+                                <input type="file" class="form-control txtOnly" multiple id="TxtEmpFile" accept=".png, .jpg, .jpeg" required>
+                                <span class="help-block" id="ErrorFile"></span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="box-footer text-center">
                     <button type="button" class="btn btn-success" id="btnSave" onclick="SaveFromData()" style="margin-right:10px;width:110px;">Save</button>
-                    <button type="button" class="btn btn-danger" onclick="ResetFromData()" style="width:110px;">Reset</button>
+                    <button type="button" class="btn btn-danger" id="dltBtn" onclick="ResetFromData()" style="width:110px;">Reset</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-8">
             <div class="box box-primary" style="box-shadow: 5px 5px 5px 10px lightgray;">
                 <div class="box-header with-border" style="background-color:lightblue">
                     <h3 class="box-title text-center" id="PageTitle"><b>Employee List</b></h3>
@@ -56,7 +69,6 @@
         </div>
 
     </div>
-</div>
 
 
 @section LocalJS{
@@ -70,6 +82,7 @@
     
     <script src="~/PageJS/employee.js"></script>
     <link href="~/CustomCSS/Emp.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js" />
     <script src="~/CustomCSS/bootstrap.min.js"></script>
     <script src="~/Scripts/bootbox.min.js"></script>
     <script src="~/Scripts/fontawesome/fontawesome.min.js"></script>

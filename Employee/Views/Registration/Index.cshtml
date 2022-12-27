@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="box-body box-primary with-border" id="DIV">
+            <div class="row">
+                <div class="col-md-4" id="UserForm">
+                    <div class="form-group">
+                        <div class="box-heder with-border">
+                            <h3 class="box-title" id="PageTitle">Add User</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @*<input type="text" id="TxtId" hidden />*@
+                                    
+                                        <div class="form-group" id="DivFirstName">
+                                            <label for="">Name<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control txtOnly" id="TxtFirstName" placeholder="Enter Name" maxlength="50" autocomplete="off" />
+                                            <span class="help-block" id="ErrorFirstName"></span>
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-md-12">
+                                    
+                                        <div class="form-group" id="DivEmailId">
+                                            <label for="">EmailId<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="TxtEmailId" placeholder="Enter EmailId" autocomplete="off">
+                                            <span class="help-block" id="ErrorEmailId"></span>
+                                        </div>
+                                   
+                                </div>
+                                <div class="col-md-12">
+                                    
+                                        <div class="form-group" id="DivPassword">
+                                            <label for="">Password<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="TxtPassword" placeholder="Enter Password" autocomplete="off">
+                                            <span class="help-block" id="ErrorPassword"></span>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-footer text-center">
+                            <button type="button" class="btn btn-success btnsave" id="btnSave" onclick="SaveFromData()" style="margin-right: 10px;width:110px;">Save</button>
+                            <button type="button" class="btn btn-danger" onclick="ResetFromData()" style="width:110px;">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" id="Usertable" style="display:none;">
+                    <div id="UserContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section LocalJs{
+    <script>
+     function refreshDataTable() {
+         $("#UserContent").load("@Url.Action("UserPartial", "Registration")", function () {
+             $("#TableUserPartial").DataTable();
+	     });
+     }
+    </script>
+    <script src="~/PageJS/User.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+
+}

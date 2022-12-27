@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Employeemodel
+namespace LocationDAL
 {
     public class Class1
     {

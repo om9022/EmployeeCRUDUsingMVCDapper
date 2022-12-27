@@ -121,6 +121,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,11 +155,14 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="PageJS\employee.js" />
+    <Content Include="PageJS\Location.js" />
+    <Content Include="PageJS\User.js" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\dataTables.bootstrap.min.js" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
     <Content Include="Scripts\fontawesome\brands.js" />
@@ -209,10 +215,16 @@
     <Content Include="webfonts\fa-brands-400.woff" />
     <Content Include="webfonts\fa-brands-400.ttf" />
     <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="Views\Location\Index.cshtml" />
+    <Content Include="Views\Location\LocationPartial.cshtml" />
+    <Content Include="Views\Registration\Index.cshtml" />
+    <Content Include="Views\Registration\UserPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Uploads\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -231,6 +243,10 @@
     <ProjectReference Include="..\EmployeeBAL\EmployeeBAL.csproj">
       <Project>{35F5AE25-BE4B-47BA-B6C9-F34C217B2628}</Project>
       <Name>EmployeeBAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeDAL\EmployeeDAL.csproj">
+      <Project>{EBF48FCA-BAE2-411A-A121-E38C2686D1D8}</Project>
+      <Name>EmployeeDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Employeemodel\Employeemodel.csproj">
       <Project>{AF4E6111-A5EA-4959-AC60-31044CC115AF}</Project>

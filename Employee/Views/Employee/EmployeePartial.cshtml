@@ -1,39 +1,48 @@
 ﻿@model Employeemodel.EmployeeViewModelView
 @if (Model.EmplModelList.Count > 0 || Model.EmplModelList != null)
 {
-    <table class="table table-bordered table-striped" id="TableBuyer">
+    <table class="table table-bordered table-striped" id="TableLocation">
         <thead>
 
             <tr>
-                
+
                 <th class="text-center">Name</th>
                 <th class="text-center">Contact</th>
                 <th class="text-center">Location</th>
+                <th class="text-center">File</th>
+                <th class="text-center">ImageView</th>
                 <th class="text-center">Actions</th>
             </tr>
         </thead>
         <tbody>
             @for (int i = 0; i < Model.EmplModelList.Count; i++)
             {
-                <tr>
-                   
-                    <td class="text-center">
-                        @Model.EmplModelList[i].Name
-                    </td>
-                    <td class="text-center">
-                        @Model.EmplModelList[i].Contact
-                    </td>
-                    <td class="text-center">
-                        @Model.EmplModelList[i].Location
-                    </td>
-                    <td class="text-center" style="padding: 3px;">
-                        <div class="btn-group">
-                            <a id="@Model.EmplModelList[i].Id" onclick="ViewFromData(this.id);" data-toggle="tooltip" title="Edit" data-placement="left" class="btn btn-sm btn-default waves-effect" style="height: 30px;margin-right: 10px;border-radius: 5px;padding-top:7px;"><i class="bi bi-pencil-square"></i></a>
+            <tr>
+                <td class="text-center">
+                    @Model.EmplModelList[i].Name
+                </td>
+                <td class="text-center">
+                    @Model.EmplModelList[i].Contact
+                </td>
+                <td class="text-center">
+                    @Model.EmplModelList[i].Location
+                </td>
+                <td class="text-center">
+                    @Model.EmplModelList[i].FilePath
+                </td>
+                <td class="text-center">
+                    <img src="@Url.Content(@Model.EmplModelList[i].FilePath)" height="100" width="100" />
+                   @* @Model.EmplModelList[i].ImageFile*@
+                </td>
 
-                            <a id="@Model.EmplModelList[i].Id" onclick="RemoveFromData(this.id)" data-toggle="tooltip" title="Delete" data-placement="left" class="btn btn-sm btn-danger waves-effect" style="height: 30px;border-radius: 5px;padding-top: 7px;"><i class="bi bi-trash3-fill"></i></a>
-                        </div>
-                    </td>
-                </tr>
+                <td class="text-center" style="padding: 3px;">
+                    <div class="btn-group">
+                        <a id="@Model.EmplModelList[i].Id" onclick="ViewFromData(this.id);" data-toggle="tooltip" title="Edit" data-placement="left" class="btn btn-sm btn-default waves-effect" style="height: 30px;margin-right: 10px;border-radius: 5px;padding-top:7px;"><i class="bi bi-pencil-square"></i></a>
+
+                        <a id="@Model.EmplModelList[i].Id" onclick="RemoveFromData(this.id)" data-toggle="tooltip" title="Delete" data-placement="left" class="btn btn-sm btn-danger waves-effect dlt_button_table" style="height: 30px;border-radius: 5px;padding-top: 7px;"><i class="bi bi-trash3-fill"></i></a>
+                    </div>
+                </td>
+            </tr>
             }
         </tbody>
     </table>
@@ -46,6 +55,9 @@ else
                 <th class="text-center">Name</th>
                 <th class="text-center">Contact</th>
                 <th class="text-center">Location</th>
+                <th class="text-center">File</th>
+                <th class="text-center">ImageView</th>
+
             </tr>
         </thead>
         <tbody>

@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5" p-4>
+            <div class="box box-primary " style="box-shadow: 5px 5px 5px 10px lightgray;">
+                <div class="box-header with-border" style="background-color:lightblue">
+                    <h3 class="box-title text-center " id="PageTitle"><b>Add New Location</b></h3>
+                </div>
+                <div class="box-body">
+                    <input type="text" id="TxtId" hidden />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group" id="DivLocationName">
+                                <label for="">Location <span style="color:red">*</span></label>
+                                <input type="text" class="form-control txtOnly" id="TxtLocationName" placeholder="Enter Location " maxlength="50">
+                                <span class="help-block" id="ErrorLocationName"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer text-center">
+                    <button type="button" class="btn btn-success" id="btnSave" onclick="SaveFromData()" style="margin-right:10px;width:110px;">Save</button>
+                    <button type="button" class="btn btn-danger" onclick="ResetFromData()" style="width:110px;">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="box box-primary" style="box-shadow: 5px 5px 5px 10px lightgray;">
+                <div class="box-header with-border" style="background-color:lightblue">
+                    <h3 class="box-title text-center" id="PageTitle"><b>Location List</b></h3>
+                </div>
+                <div class="box-body">
+                    <div id="LocationList" style="background-color:lightgray"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section LocalJS{
+    <script>
+        function refreshDataTable() {
+            $("#LocationList").load("@Url.Action("LocationPartial", "Location")", function () {
+                $("#TableLocation").DataTable();
+	        });
+        }
+    </script>
+    <script src="~/PageJS/Location.js"></script>
+    <link href="~/CustomCSS/Emp.css" rel="stylesheet" />
+    <script src="~/CustomCSS/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootbox.min.js"></script>
+    <script src="~/Scripts/fontawesome/fontawesome.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+}
