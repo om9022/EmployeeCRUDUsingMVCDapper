@@ -5,11 +5,12 @@
         <thead>
 
             <tr>
+                <th class="text-center">Id</th>
 
                 <th class="text-center">Name</th>
                 <th class="text-center">Contact</th>
                 <th class="text-center">Location</th>
-                <th class="text-center">File</th>
+                @*<th class="text-center">File</th>*@
                 <th class="text-center">ImageView</th>
                 <th class="text-center">Actions</th>
             </tr>
@@ -19,6 +20,9 @@
             {
             <tr>
                 <td class="text-center">
+                    @Model.EmplModelList[i].Id
+                </td>
+                <td class="text-center">
                     @Model.EmplModelList[i].Name
                 </td>
                 <td class="text-center">
@@ -27,14 +31,19 @@
                 <td class="text-center">
                     @Model.EmplModelList[i].Location
                 </td>
+                @*<td class="text-center">
+            @Model.EmplModelList[i].FilePath
+        </td>*@
                 <td class="text-center">
-                    @Model.EmplModelList[i].FilePath
-                </td>
-                <td class="text-center">
-                    <img src="@Url.Content(@Model.EmplModelList[i].FilePath)" height="100" width="100" />
-                   @* @Model.EmplModelList[i].ImageFile*@
-                </td>
 
+                    @for (int j = 0; j < @Model.EmplModelList[i].UploadedFiles.Count; j++)
+                    {
+                        <img src="@Model.EmplModelList[i].UploadedFiles[j]" height="100" width="100" />
+                    }
+
+                    @*<a href="@Model.EmplModelList[i].FileName" target="_blank">@Model.EmplModelList[i].FileName</a>*@
+                    @*@Model.EmplModelList[i].ImageFile*@
+                </td>
                 <td class="text-center" style="padding: 3px;">
                     <div class="btn-group">
                         <a id="@Model.EmplModelList[i].Id" onclick="ViewFromData(this.id);" data-toggle="tooltip" title="Edit" data-placement="left" class="btn btn-sm btn-default waves-effect" style="height: 30px;margin-right: 10px;border-radius: 5px;padding-top:7px;"><i class="bi bi-pencil-square"></i></a>
@@ -52,10 +61,12 @@ else
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
+                <th class="text-center">Id</th>
+
                 <th class="text-center">Name</th>
                 <th class="text-center">Contact</th>
                 <th class="text-center">Location</th>
-                <th class="text-center">File</th>
+                @*<th class="text-center">File</th>*@
                 <th class="text-center">ImageView</th>
 
             </tr>

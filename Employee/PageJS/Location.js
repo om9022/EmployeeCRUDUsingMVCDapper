@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿
+$(document).ready(function () {
     refreshDataTable();
 });
 
@@ -12,7 +13,6 @@ function SaveFromData() {
         return;
     }
     else {
-        
         var formdata = new FormData();
         formdata.append("Location", Location);
         $.ajax({
@@ -43,13 +43,15 @@ function SaveFromData() {
 }
 
 function ViewFromData(Id) {
-    $("#TxtId").val(Id);
+    debugger;
+    $("#TxtId").val(Id); 
     $.ajax({
         type: "GET",
         url: '/Location/ViewLocationName?Id=' + Id,
         success: function (return_Data) {
-            if (return_Data.LocModel != null) {
-                $("#TxtLocationName").val(return_Data.LocModel.Location);
+            if (return_Data != null) {
+               
+                $("#TxtLocationName").val(return_Data.LocationModels.Location);
                 $("#PageTitle").text('Update Location Name');
                 $('#btnSave').text('Update');
                 $('#btnSave').attr('onclick', 'UpdateFromData(' + Id + ');');
@@ -60,6 +62,7 @@ function ViewFromData(Id) {
         }
     });
 }
+
 
 
 //update

@@ -20,5 +20,6 @@ namespace Employeemodel
         public ResponseStatusModel response { get; set; }
 
         public LocModel LocationModels { get; set; }
+
     }
 }

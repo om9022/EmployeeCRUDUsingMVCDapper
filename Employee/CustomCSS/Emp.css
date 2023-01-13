@@ -28,3 +28,7 @@ label {
 .box-title, pageTitle{
     padding:10px;
 }
+
+.viewfile{
+    display:none;
+}
