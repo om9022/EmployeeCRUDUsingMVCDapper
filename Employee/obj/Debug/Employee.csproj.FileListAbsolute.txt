@@ -110,3 +110,13 @@ C:\Users\Admin\source\repos\Employee\Employee\obj\Debug\Employee.csproj.CoreComp
 C:\Users\Admin\source\repos\Employee\Employee\obj\Debug\Employee.csproj.CopyComplete
 C:\Users\Admin\source\repos\Employee\Employee\obj\Debug\Employee.dll
 C:\Users\Admin\source\repos\Employee\Employee\obj\Debug\Employee.pdb
+C:\Users\Admin\source\repos\Employee\Employee\bin\ExcelDataReader.DataSet.dll
+C:\Users\Admin\source\repos\Employee\Employee\bin\ExcelDataReader.dll
+C:\Users\Admin\source\repos\Employee\Employee\bin\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Admin\source\repos\Employee\Employee\bin\ExcelDataReader.pdb
+C:\Users\Admin\source\repos\Employee\Employee\bin\ExcelDataReader.xml
+C:\Users\Admin\source\repos\Employee\Employee\bin\ExcelDataReader.DataSet.pdb
+C:\Users\Admin\source\repos\Employee\Employee\bin\ExcelDataReader.DataSet.xml
+C:\Users\Admin\source\repos\Employee\Employee\bin\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Admin\source\repos\Employee\Employee\bin\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\source\repos\Employee\Employee\bin\System.Text.Encoding.CodePages.xml

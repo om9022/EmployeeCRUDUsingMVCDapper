@@ -35,3 +35,6 @@ C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.csproj.Co
 C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.csproj.CopyComplete
 C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.dll
 C:\Users\Admin\source\repos\Employee\EmployeeDAL\obj\Debug\EmployeeDAL.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\ExcelDataReader.dll
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\ExcelDataReader.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeDAL\bin\Debug\ExcelDataReader.xml

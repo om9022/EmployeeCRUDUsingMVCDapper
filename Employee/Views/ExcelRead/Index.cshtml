@@ -1,0 +1,34 @@
+﻿
+<div class="col-md-4" style="display:flex; justify-content:center; margin:50px;width:100%">
+    <div class="form-group" id="DivExcelFile" style="padding:20px;background:lightgray; box-shadow:10px 10px 10px gray; display:flex; justify-content:center;width:50%">
+        <input type="file" multiple class="form-control " id="TxtExcelFile" style="margin:10px" placeholder="Please Excel Upload File">
+        <span class="help-block" id="ErrorExcelFile"></span>
+        <button type="button" class="btn btn-success " style="margin:10px" id="btnsave" onclick="ExcelData()">Show </button>
+
+    </div>
+</div>
+
+
+<table class="table table-bordered table-striped" id="tableHead" hidden>
+    <tr>
+        <td class="text-center " style="font-weight:bolder; background:lightgray;">Name</td>
+        <td class="text-center" style="font-weight: bolder; background: lightgray;">Roll No</td>
+        <td class="text-center" style="font-weight: bolder; background: lightgray;">Email</td>
+    </tr>
+    <tbody id="tbody">
+    </tbody>
+</table>
+
+
+
+
+@section LocalJS{
+    <script src="~/PageJS/Excel.js"></script>
+    <link href="~/CustomCSS/Emp.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js" />
+    <script src="~/CustomCSS/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootbox.min.js"></script>
+    <script src="~/Scripts/fontawesome/fontawesome.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+}

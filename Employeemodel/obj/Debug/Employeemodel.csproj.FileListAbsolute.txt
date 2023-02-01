@@ -29,4 +29,7 @@ C:\Users\Admin\source\repos\Employee\Employeemodel\obj\Debug\Employeemodel.cspro
 C:\Users\Admin\source\repos\Employee\Employeemodel\obj\Debug\Employeemodel.csproj.CopyComplete
 C:\Users\Admin\source\repos\Employee\Employeemodel\obj\Debug\Employeemodel.dll
 C:\Users\Admin\source\repos\Employee\Employeemodel\obj\Debug\Employeemodel.pdb
+C:\Users\Admin\source\repos\Employee\Employeemodel\bin\Debug\ExcelDataReader.dll
+C:\Users\Admin\source\repos\Employee\Employeemodel\bin\Debug\ExcelDataReader.pdb
+C:\Users\Admin\source\repos\Employee\Employeemodel\bin\Debug\ExcelDataReader.xml
 C:\Users\Admin\source\repos\Employee\Employeemodel\obj\Debug\Employeemodel.csproj.AssemblyReference.cache

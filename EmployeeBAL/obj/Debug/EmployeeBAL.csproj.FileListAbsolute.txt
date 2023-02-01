@@ -38,3 +38,6 @@ C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.csproj.Co
 C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.csproj.CopyComplete
 C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.dll
 C:\Users\Admin\source\repos\Employee\EmployeeBAL\obj\Debug\EmployeeBAL.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\ExcelDataReader.dll
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\ExcelDataReader.pdb
+C:\Users\Admin\source\repos\Employee\EmployeeBAL\bin\Debug\ExcelDataReader.xml

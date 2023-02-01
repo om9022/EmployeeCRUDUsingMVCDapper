@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="section">
+    <h1>Encrypt/Decrypt Text</h1>
+</div>
+<div class="section">
+    
+    <div class="row formPage">
+
+        <div class="col-md-12 bStyle " >
+            <div class="Encrypt">
+                <label class="names">Enter Text:</label>
+                <input type="text" class="form-control" id="encTxt" />
+                <button class="btn btn-success" id="encBtn" onclick="PlainText()" value="Encrypt">Encrypt</button>
+            </div>
+            <div>
+                <label class="names">
+                    Encrypted Text:
+                </label>
+                <input type="text" class="form-control" id="encValue" />
+            </div>
+        </div>
+        <hr />
+        <div class="col-md-12 px-4">
+            <div class="Decrypt">
+                <label class="names">Enter Text:</label>
+                <input type="text" class="form-control" id="decTxt" />
+                <button class="btn btn-danger" id="decBtn" onclick="cipherText()" value="Decrypt">Decrypt</button>
+            </div>
+            <div>
+                <label class="names">
+                    Decrypted Text:
+                </label>
+                <input type="text" class="form-control" id="decValue" />
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="btn1">
+    <button class="btn btn-warning" onclick="ResetFromData()"> Reset </button>
+</div>
+@section LocalJS{
+    <script src="~/PageJS/Cryptography.js"></script>
+    <link href="~/CustomCSS/crypto.css" rel="stylesheet" />
+}

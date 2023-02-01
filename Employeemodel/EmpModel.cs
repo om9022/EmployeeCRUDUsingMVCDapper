@@ -15,7 +15,7 @@ namespace Employeemodel
         public string Location { get; set; }
         public int Status { get; set; }
         public  string FilePath { get; set; }
-        //public HttpPostedFileBase ImageFile { get; set; }
+        public HttpPostedFileBase ImageFile { get; set; }
         public List<HttpPostedFileBase> multiFiles { get; set; }
         public string FileName { get; set; }
         public List<string> UploadedFiles { get; set; }

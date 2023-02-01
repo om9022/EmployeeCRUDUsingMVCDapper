@@ -68,6 +68,7 @@ function SaveFromData() {
         formdata.append("FilePath", patharray);
         formdata.append("ImageFile", image[0]);
         formdata.append("FileName", namearray);
+        formdata.append("FileName", image[0]);
 
 
 
@@ -103,7 +104,7 @@ function SaveFromData() {
 }
 
 function ViewFromData(Id) {
-
+    
     $("#TxtId").val(Id);
     $.ajax({
         type: "GET",

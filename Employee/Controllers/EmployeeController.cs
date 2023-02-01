@@ -2,16 +2,20 @@
 using EmployeeBAL;
 using EmployeeDAL;
 using Employeemodel;
+using ExcelDataReader;
 using Newtonsoft.Json;
+//using OfficeOpenXml;
 //using LocationBAL;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace Employee.Controllers
 {
@@ -86,19 +90,26 @@ namespace Employee.Controllers
             userAPI.UploadedFiles = user.UploadedFiles;
             var result = JsonConvert.DeserializeObject<ResponseStatusModel>(Transaction.Post("/AddEmployee", userAPI).Content);
             response = result;
-                var files = user.multiFiles;
-                foreach (var file in user.multiFiles)
-                {
-                    //var ext = Path.GetExtension(user.FilePath);
-                    if (file.ContentLength > 0)
-                    {
-                        string path = Server.MapPath("~/Models/"+file.FileName);
-                        
-                        file.SaveAs(Path.Combine(path));
-                    }
-                }
-                return Json(response, JsonRequestBehavior.AllowGet);
 
+            //image upload
+            var files = user.multiFiles;
+            //foreach (var file in user.multiFiles)
+            //{
+            //    //var ext = Path.GetExtension(user.FilePath);
+            //    if (file.FileName.EndsWith("xls") || file.FileName.EndsWith("xlsx") || file.ContentLength > 0)
+            //    {
+            //        string path = Server.MapPath("~/Models/" + file.FileName);
+            //        file.SaveAs(Path.Combine(path));
+            //    }
+            //}
+            return Json( JsonRequestBehavior.AllowGet);
+
+        
+
+
+    
+
+   
 
             //var files = user.multiFiles;
             //foreach (var file in user.multiFiles)

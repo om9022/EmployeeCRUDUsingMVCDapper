@@ -1,0 +1,45 @@
+﻿.body-content {
+    box-shadow: 6px 6px 6px 6px gray;
+    width:60%;
+}
+.section {
+    display: flex;
+    justify-content: center;
+    max-height:600px;
+    align-items:center;
+}
+.bStyle {
+    border-right:1px solid gray;
+}
+.formPage {
+    width: 100% !important;
+    display: flex !important;
+    align-items: baseline !important;
+    padding: 50px 20px;
+    background: #8275692b;
+}
+.names{
+    margin-top:30px;
+}
+.form-control{
+    margin-bottom:10px;
+}
+input, select, textarea {
+     max-width: 400px; 
+}
+h1 {
+    font-weight: bolder;
+    font-size: 40px;
+    font-family: ui-monospace;
+    color: gray;
+    margin: 20px 0px;
+}
+.btn1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.btn-warning {
+    padding: 9px 25px;
+}
